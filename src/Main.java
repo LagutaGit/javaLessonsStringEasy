@@ -1,9 +1,11 @@
 public class Main {
 
-    public void lection(){
+    public static void lection(){
         String phone = "800-555-35-35";
 //        Добавляю проверку если ввели -
         phone = phone.replace("-", "");
+        phone = phone.replace(" ", "");
+        phone = phone.replace("+", "");
         if (phone.length() == 10) {
             phone = "7" + phone;
         } else if (phone.length() > 11){
@@ -22,6 +24,6 @@ public class Main {
 
 
     public static void main(String[] args) {
-//        lection();
+        lection();
     }
 }
